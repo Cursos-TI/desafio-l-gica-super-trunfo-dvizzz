@@ -139,24 +139,19 @@ int main() {
     printf(" - PIB per Capita: %.2f reais \n", pibperca_2);
     printf(" - *Super Poder*: %.2f\n\n", superPoder2);    
 
-    // Resultado das comparações   
-    printf("-- RESULTADO --\n");
-    printf("Atributo - População: \n");
+    // Resultado das comparações. A carta que tiver o maior valor em um determinado atributo aparecerá como vencedora, através do if-else
+    printf("-- RESULTADO --\n\n");
+
+    printf("Atributo - (População) \n");
+    printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
+    printf("Carta 2 - %s: %d\n\n", cidade_2, populacao_2);
+
     if (populacao_1 > populacao_2)
     {
-        printf("Vencedor: Carta 1 (%s)\n", cidade_1);
+        printf("Vencedor: Carta 1 (%s)\n\n", cidade_1);
     }else {
-        printf("Vencedor: Carta 2 (%s)\n", cidade_2);
+        printf("Vencedor: Carta 2 (%s)\n\n", cidade_2);
     }
-    
-    
-    printf(" - Área: \n");
-    printf(" - PIB: \n");
-    printf(" - Número de pontos turísticos: \n");
-    printf(" - Densidade Populacional: \n");
-    printf(" - PIB per Capita: \n");
-    printf(" - *Super Poder*: \n");
-
 
     return 0;
 }
