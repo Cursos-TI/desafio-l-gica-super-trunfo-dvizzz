@@ -3,6 +3,7 @@
 int main() {
 
     // Criando as variáveis
+    int escolhaAtributo;
     unsigned long int populacao_1, populacao_2;
     int pontosturisticos_1, pontosturisticos_2;
     float area_1, area_2, pib_1, pib_2;
@@ -137,14 +138,49 @@ int main() {
     printf(" - Número de pontos turísticos: %d \n", pontosturisticos_2);
     printf(" - Densidade Populacional: %.2f hab/km² \n", densipopu_2);
     printf(" - PIB per Capita: %.2f reais \n", pibperca_2);
-    printf(" - *Super Poder*: %.2f\n\n", superPoder2);    
+    printf(" - *Super Poder*: %.2f\n\n", superPoder2);
+
+    // Criando o menu interativo com switch
+    printf("- Escolha o atributo da carta a ser comparado -\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Números de Pontos Turísticos\n");
+    printf("5. Densidade Demográfica\n");
+    scanf("%d", &escolhaAtributo);
+
+    switch (escolhaAtributo)
+    {
+    case 1:
+        /* code */
+        break;
+
+    case 1:
+        /* code */
+        break;
+
+    case 1:
+        /* code */
+        break;
+
+    case 1:
+        /* code */
+        break;
+
+    case 1:
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
 
     // Resultado das comparações. A carta que tiver o maior valor em um determinado atributo aparecerá como vencedora, através do if-else
     printf("-- RESULTADO --\n\n");
 
     printf("Atributo - (População) \n");
     printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-    printf("Carta 2 - %s: %d\n\n", cidade_2, populacao_2);
+    printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
 
     if (populacao_1 > populacao_2)
     {
