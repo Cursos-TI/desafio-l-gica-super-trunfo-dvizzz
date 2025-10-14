@@ -15,6 +15,9 @@ int main() {
     // * Nova propriedade *
     float superPoder1, superPoder2;
 
+    // Variavel pro menu
+    int opcao;
+
     /*
     // Variáveis que vão armazenar os resultados das comparações
     int resultadoPopulacao, resultadoArea, resultadoPIB, resultadoPontosTuristicos, resultadoDensiPopulacional, resultadoPIBperCap, resultadoPoder;
@@ -42,7 +45,17 @@ int main() {
     
     // Mostrando a mensagem "Jogo de Cartas - Super Trunfo" na tela
     printf("Jogo de Cartas - Super Trunfo\n");
+    printf("Menu Principal\n");
+    printf("1. Iniciar Jogo\n");
+    printf("2. Ver Regras\n");
+    printf("3. Sair do Jogo\n");
 
+    printf("Escolha uma opção: \n");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+    case 1:
     printf("- Carta 1 - \n");
     // Pedindo informações ao usuário, e lendo as informações da carta 1 com printf e scanf
     printf("Digite a letra que representa o estado que está na sua carta: \n");
@@ -107,17 +120,6 @@ int main() {
 
     superPoder2 = (float) populacao_2 + area_2 + pib_2 + pontosturisticos_2 + pibperca_2 + (1.0f / densipopu_2);
 
-    /*
-    // Armazenando os valores das comparações
-    resultadoPopulacao = populacao_1 > populacao_2;
-    resultadoArea = area_1 > area_2;
-    resultadoPIB = pib_1 > pib_2;
-    resultadoPontosTuristicos = pontosturisticos_1 > pontosturisticos_2;
-    resultadoDensiPopulacional = densipopu_1 < densipopu_2;
-    resultadoPIBperCap = pibperca_1 > pibperca_2;
-    resultadoPoder = superPoder1 > superPoder2;
-    */
-
 
     // Apresentando na tela as informações da carta 1
     printf("Carta 1: \n - Estado: %c \n - Código da carta: %s \n - Nome da Cidade: %s \n", estado_1, codcarta_1, cidade_1);   
@@ -160,14 +162,14 @@ int main() {
         if (populacao_1 > populacao_2)
         {
             printf("Atributo - (População)\n");
-            printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-            printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
+            printf("Carta 1 - %s: %lu\n", cidade_1, populacao_1);
+            printf("Carta 2 - %s: %lu\n", cidade_2, populacao_2);
             printf("Vencedor: Carta 1 (%s)\n\n", cidade_1);
         } else if (populacao_1 < populacao_2)
         {
             printf("Atributo - (População)\n");
-            printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-            printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
+            printf("Carta 1 - %s: %lu\n", cidade_1, populacao_1);
+            printf("Carta 2 - %s: %lu\n", cidade_2, populacao_2);
             printf("Vencedor: Carta 2 (%s)\n\n", cidade_2);
         } else
         {
@@ -267,22 +269,25 @@ int main() {
         break;
     
     default:
+        printf("Opção inválida\n");
+        break;
+    }
+        break;
+
+    case 2:
+        printf("Regras do Super Trunfo...\n");
+        break;
+
+    case 3:
+        printf("Saindo do jogo...\n");
+        break;
+    
+    default:
+        printf("Opção inválida!\n");
         break;
     }
 
-    // Resultado das comparações. A carta que tiver o maior valor em um determinado atributo aparecerá como vencedora, através do if-else
-    printf("-- RESULTADO --\n\n");
 
-    printf("Atributo - (População) \n");
-    printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-    printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
-
-    if (populacao_1 > populacao_2)
-    {
-        printf("Vencedor: Carta 1 (%s)\n\n", cidade_1);
-    }else {
-        printf("Vencedor: Carta 2 (%s)\n\n", cidade_2);
-    }
 
     return 0;
 }
