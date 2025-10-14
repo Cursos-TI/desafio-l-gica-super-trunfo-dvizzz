@@ -149,10 +149,16 @@ int main() {
     printf("5. Densidade Demográfica\n");
     scanf("%d", &escolhaAtributo);
 
+    printf("Carta 1 (%s) x Carta 2 (%s)\n", cidade_1, cidade_2);
+
     switch (escolhaAtributo)
     {
     case 1:
-        /* code */
+        if (populacao_1 > populacao_2)
+        {
+            printf("")
+        }
+        
         break;
 
     case 1:
