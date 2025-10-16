@@ -3,7 +3,7 @@
 int main() {
 
     // Criando as variáveis
-    int escolhaAtributo;
+    int escolhaAtributo, escolhaAtributo2;
     unsigned long int populacao_1, populacao_2;
     int pontosturisticos_1, pontosturisticos_2;
     float area_1, area_2, pib_1, pib_2;
@@ -15,13 +15,11 @@ int main() {
     // * Nova propriedade *
     float superPoder1, superPoder2;
 
-    // Variavel pro menu
+    // Variavel para o menu
     int opcao;
 
-    /*
-    // Variáveis que vão armazenar os resultados das comparações
-    int resultadoPopulacao, resultadoArea, resultadoPIB, resultadoPontosTuristicos, resultadoDensiPopulacional, resultadoPIBperCap, resultadoPoder;
-    */
+    // Variavel para os resultados
+    int resultado1, resultado2, resultado3;
 
     // Inicializando variáveis para evitar problemas
     populacao_1 = 300;
