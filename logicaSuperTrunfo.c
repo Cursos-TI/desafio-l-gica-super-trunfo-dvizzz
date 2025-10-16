@@ -171,11 +171,12 @@ int main() {
             printf("Vencedor: Carta 2 (%s)\n\n", cidade_2);
         } else
         {
-            printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-            printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
+            printf("Carta 1 - %s: %lu\n", cidade_1, populacao_1);
+            printf("Carta 2 - %s: %lu\n", cidade_2, populacao_2);
             printf("Empate!\n\n");
         }
 
+        // Fazendo a comparação e recebendo o valor do resultado com operador ternário
         resultado1 = populacao_1 > populacao_2 ? 1 : 0;
 
         break;
@@ -293,9 +294,11 @@ int main() {
     printf("5. Densidade Demográfica\n");
     scanf("%d", &escolhaAtributo2);
 
+    // No caso do jogador escolher o mesmo atributo, aparecerá a mensagem "Você escolheu o mesmo atributo!"
     if (escolhaAtributo == escolhaAtributo2)
     {
-        printf("Você escolheu o mesmo atributo!");
+        printf("Você escolheu o mesmo atributo!\n");
+    // Se não, o jogo vai prosseguir    
     } else
     {
         switch (escolhaAtributo2)
@@ -316,8 +319,8 @@ int main() {
             printf("Vencedor: Carta 2 (%s)\n\n", cidade_2);
         } else
         {
-            printf("Carta 1 - %s: %d\n", cidade_1, populacao_1);
-            printf("Carta 2 - %s: %d\n", cidade_2, populacao_2);
+            printf("Carta 1 - %s: %lu\n", cidade_1, populacao_1);
+            printf("Carta 2 - %s: %lu\n", cidade_2, populacao_2);
             printf("Empate!\n\n");
         }
 
@@ -429,21 +432,23 @@ int main() {
         printf("Opção inválida\n");
         break;
     }
-    }
-    
+
     printf("-- RESULTADO FINAL --\n");
     printf("Carta 1 x Carta 2\n");
     printf("%s x %s\n", cidade_1, cidade_2);
+
 
     if (resultado1 && resultado2)
     {
         printf("*Vencedor*: Carta 1 (%s)\n", cidade_1);
     } else if (resultado1 != resultado2)
     {
-        printf("Empate!");
+        printf("Empate!\n");
     } else
     {
-        printf("*Vencedor*: Carta 2 (%s)\n\n", cidade_2);
+        printf("*Vencedor*: Carta 2 (%s)\n", cidade_2);
+    }
+
     }
 
         break;
