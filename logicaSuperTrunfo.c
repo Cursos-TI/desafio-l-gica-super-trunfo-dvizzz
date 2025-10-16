@@ -431,13 +431,20 @@ int main() {
     }
     }
     
-    
-
-
-    printf("-- RESULTADO --\n\n");
+    printf("-- RESULTADO FINAL --\n");
     printf("Carta 1 x Carta 2\n");
     printf("%s x %s\n", cidade_1, cidade_2);
 
+    if (resultado1 && resultado2)
+    {
+        printf("*Vencedor*: Carta 1 (%s)\n", cidade_1);
+    } else if (resultado1 != resultado2)
+    {
+        printf("Empate!");
+    } else
+    {
+        printf("*Vencedor*: Carta 2 (%s)\n\n", cidade_2);
+    }
 
         break;
 
